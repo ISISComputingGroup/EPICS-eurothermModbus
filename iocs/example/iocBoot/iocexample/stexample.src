@@ -26,12 +26,12 @@ modbusInterposeConfig("EUROTHERM",0, 2000, 0)
 # params are portname, tcpportname, slaveaddr, modbusfunction (3)
 #      modbusstartaddr, modbuslen, datatype (0)
 #      pollmsec, plctype
-drvModbusAsynConfigure("EURTHM_MB_1_MASTER_RX","EUROTHERM",1, 3,-1,1, 0,1000, "")
+drvModbusAsynConfigure("EURTHM_MB_1_MASTER_RX","EUROTHERM",1, 3,-1,1, "UINT16",1000, "")
 
 # params are portname, tcpportname, slaveaddr, modbusfunction (6)
 #      modbusstartaddr, modbuslen, datatype (0)
 #      pollmsec, plctype
-drvModbusAsynConfigure("EURTHM_MB_1_MASTER_TX","EUROTHERM",1, 6,-1,1, 0,0, "")
+drvModbusAsynConfigure("EURTHM_MB_1_MASTER_TX","EUROTHERM",1, 6,-1,1, "UINT16",0, "")
 
 asynSetOption("EUROTHERM", 0, "disconnectOnReadTimeout", "Y")
 
